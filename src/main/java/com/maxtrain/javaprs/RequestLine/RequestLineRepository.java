@@ -1,5 +1,7 @@
 package com.maxtrain.javaprs.RequestLine;
 
-public interface RequestLineRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface RequestLineRepository extends CrudRepository<RequestLine, Integer> {
 
 }
