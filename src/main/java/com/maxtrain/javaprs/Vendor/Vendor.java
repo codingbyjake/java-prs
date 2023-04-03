@@ -14,23 +14,23 @@ public class Vendor {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	public int id;
+	private int id;
 	@Column(length=30, nullable = false)
-	public String code;
+	private String code;
 	@Column(length=30, nullable = false)
-	public String name;
+	private String name;
 	@Column(length=30, nullable = false)
-	public String address;
+	private String address;
 	@Column(length=30, nullable = false)
-	public String city;
+	private String city;
 	@Column(length=2, nullable = false)
-	public String state;
+	private String state;
 	@Column(length=5, nullable = true)
-	public String zip;
+	private String zip;
 	@Column(length=12, nullable = true)
-	public String phone;
+	private String phone;
 	@Column(length=255, nullable = true)
-	public String email;
+	private String email;
 	
 	// Getters and Setters
 	public int getId() {

@@ -11,20 +11,20 @@ public class Product {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	@Column(length=30, nullable = false)
-	public String partNbr;
+	private String partNbr;
 	@Column(length=30, nullable = false)
-	public String name;
+	private String name;
 	@Column(columnDefinition="decimal(11,2) NOT NULL")
-	public double price;
+	private double price;
 	@Column(length=30, nullable = false)
-	public String unit;
+	private String unit;
 	@Column(length=255, nullable = true)
-	public String photoPath;
+	private String photoPath;
 	
 	// FK's and Virtual Props
 	@ManyToOne(optional=false)
 	@JoinColumn(name="vendorId", columnDefinition="int")
-	public Vendor vendor;
+	private Vendor vendor;
 
 	
 	// Getters and Setters
