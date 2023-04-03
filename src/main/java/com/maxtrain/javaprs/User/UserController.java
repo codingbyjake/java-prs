@@ -50,7 +50,7 @@ public class UserController {
 	@PostMapping
 	public ResponseEntity<User> postUser(@RequestBody User user){
 		User newUser = userRepo.save(user);
-		return new ResponseEntity<User>(newUser, HttpStatus.OK);
+		return new ResponseEntity<User>(newUser, HttpStatus.CREATED);
 	}
 	
 	@SuppressWarnings("rawtypes")
@@ -60,7 +60,7 @@ public class UserController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		userRepo.save(user);
-		return new ResponseEntity<>(HttpStatus.OK);
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
 	
 	@SuppressWarnings("rawtypes")

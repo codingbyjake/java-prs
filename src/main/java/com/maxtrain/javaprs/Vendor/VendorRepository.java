@@ -1,10 +1,7 @@
 package com.maxtrain.javaprs.Vendor;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import org.springframework.data.repository.CrudRepository;
 
-@Entity
-@Table(name="Vendors")
-public interface VendorRepository {
+public interface VendorRepository extends CrudRepository<Vendor, Integer> {
 
 }
